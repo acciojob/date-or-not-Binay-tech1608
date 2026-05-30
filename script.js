@@ -8,6 +8,7 @@ var isDate = function (input) {
 	  return false;
   }
 
+
   const timestamp  = Date.parse(input);
 
   if(isNan(timestamp)){
