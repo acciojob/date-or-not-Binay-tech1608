@@ -1,17 +1,17 @@
 var isDate = function (input) {
   //   write your code here
   if(input instanceof Date){
-		return !isNan(input.getTime());
+		return !isNaN(input.getTime());
   }
 
-  if(Array.isArray(input) || input == NULL){
+  if(Array.isArray(input) || input == null){
 	  return false;
   }
 
   const timestamp  = Date.parse(input);
 
   if(isNan(timestamp)){
-	  return typeof(input) !== 'boolean' && !(isNan(Number(input)));
+	  return typeof(input) !== 'boolean' && !(isNaN(Number(input)));
   }
 
 	return true;
